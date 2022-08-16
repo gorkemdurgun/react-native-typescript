@@ -5,12 +5,12 @@ export enum ButtonType {
 }
 
 type Action = {
-  type: ButtonType.INCREASE | ButtonType.DECREASE | ButtonType.RESET;
+  type: ButtonType.INCREASE | ButtonType.DECREASE | ButtonType.RESET; // yalnızca bu tiplerde olabilir
   payload?: number | null;
 };
 
 type State = {
-  count: number;
+  count: number; // değişken olan state için tip tanımladık
 };
 
 export function counterReducer(state: State, action: Action) {

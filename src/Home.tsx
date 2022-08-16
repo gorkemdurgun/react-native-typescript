@@ -9,7 +9,7 @@ import {CustomInput} from '.././components/others/CustomInput';
 import {User} from '../components/usestate/User';
 import {ThemeContextProvider} from '../context/ThemeContext';
 import {Box} from '../context/Box';
-import {DomRef} from '../components/refs/DomRef';
+import {DomRef} from '../components/useref/DomRef';
 import {CounterClass} from '../components/counter/CounterClass';
 import {Private} from '../components/auth/Private';
 import {Profile} from '../components/auth/Profile';
@@ -19,6 +19,7 @@ import {Status} from '../components/status/Status';
 import {Toast} from '../components/exclude/Toast';
 import Country from './CountryApp/Country';
 import CountryApp from './CountryApp/CountryApp';
+import { Loading } from '../components/childrenprop/Loading';
 
 export type TPersonList = {
   name: string;
@@ -53,7 +54,7 @@ export default function Home() {
     },
   ];
 
-  return <List items={personList} onClick={item => console.log(item)} />;
+  return <Status status={'loading'}/>
 }
 
 const styles = StyleSheet.create({

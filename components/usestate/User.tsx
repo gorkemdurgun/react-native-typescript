@@ -7,7 +7,8 @@ type TUser = {
 };
 
 export const User = () => {
-  const [user, setUser] = useState<TUser>({} as TUser);
+  const [user, setUser] = useState<TUser>({} as TUser); 
+  // gelen user değeri TUser titpinde olmalı dedik ve başlangıç değeri içini TUser'dan boş bir obje türettik.
 
   const handleLogin = () => {
     setUser({

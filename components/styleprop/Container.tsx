@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 type TContainer = {
-  viewStyle: StyleProp<ViewStyle>;
+  viewStyle: StyleProp<ViewStyle>; // props olarak style göndermek için gönderilecek style tipini tanımladık
   textStyle: StyleProp<TextStyle>;
 };
 

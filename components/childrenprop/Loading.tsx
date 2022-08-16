@@ -6,7 +6,7 @@ interface ILoadingProps {
   loading: boolean;
 }
 
-export const Loading: FunctionComponent<ILoadingProps> = props => {
+export const Loading: FunctionComponent<ILoadingProps> = props => { // alternatif bir type tanımlama türü
   const {loading} = props;
 
   if (loading) {

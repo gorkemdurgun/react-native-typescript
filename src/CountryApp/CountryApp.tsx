@@ -6,13 +6,14 @@ import {Loading} from '../../components/childrenprop/Loading';
 import {CountryType} from './Types/country_types';
 
 const CountryApp = () => {
-  const [countries, setCountries] = useState<CountryType[]>([]);
+  const [countries, setCountries] = useState<CountryType[]>([]); 
+  // countries CountryType dizisi olmalı diye tanımladık ve başlangıç değeri için boş bir dizi tanımladık
   const [isLoading, setIsLoading] = useState(false);
 
   const getCountries = async () => {
     setIsLoading(true);
     try {
-      const {data} = await axios.get<CountryType[]>(
+      const {data} = await axios.get<CountryType[]>( // CountryType tipinde olan verilerimizi axios paketi ile çektik
         'https://restcountries.com/v2/all',
       );
       setCountries(data);
@@ -39,7 +40,5 @@ const CountryApp = () => {
     </Loading>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default CountryApp;

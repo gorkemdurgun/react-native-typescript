@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const Counter = () => {
-  const [state, dispatch] = useReducer(counterReducer, initialState);
+  const [state, dispatch] = useReducer(counterReducer, initialState); // reducer yapısını ve initial durumu tanımladık
 
   return (
     <View style={styles.main}>

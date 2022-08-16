@@ -2,11 +2,12 @@ import React from 'react';
 import {Text, View} from 'react-native';
 
 type TNumberType = {
-  value: number;
+  value: number; 
+  // gelen value pozitif, negatif ya da 0 da olsa number olacağı için her numberda olacak olan value'yi tanımladık
 };
 
 type TPositive = TNumberType & {
-  isPositive: boolean;
+  isPositive: boolean; // eğer pozitifse diğer tipleri never, pozitifi boolean yaptık
   isNegative?: never;
   isZero?: never;
 };
@@ -23,7 +24,7 @@ type TZero = TNumberType & {
   isPositive?: never;
 };
 
-type TNumberProps = TPositive | TNegative | TZero;
+type TNumberProps = TPositive | TNegative | TZero; // gelen propların olabiceği tipleri sınırlandırdık
 
 export const Number = ({
   value,

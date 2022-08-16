@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View} from 'react-native';
 
 type TStatusProps = {
-  status: 'loading' | 'complete' | 'error';
+  status: 'loading' | 'complete' | 'error'; // status proplarını bu tiplerle sınırlandırdık
 };
 
 export const Status = ({status}: TStatusProps) => {

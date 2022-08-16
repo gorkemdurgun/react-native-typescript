@@ -6,11 +6,11 @@ type TSecondPosition = 'end' | 'start';
 
 type TToastProps = {
   position:
-    | Exclude<
+    | Exclude< // exclude ederek center-end gibi yanlış pozisyonların girilmesini engelledik
         `${TFirstPosition}-${TSecondPosition}`,
         'center-end' | 'center-start' | 'baseline-start' | 'baseline-end'
       >
-    | 'center'
+    | 'center' // center-end veya venter-start gibi yanlış opsiyonlar için yalnızca center gösterilsin dedik
     | 'baseline';
 };
 

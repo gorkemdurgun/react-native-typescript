@@ -3,7 +3,7 @@ import React from 'react'
 import { CountryType } from './Types/country_types'
 
 interface ICountryProps{
-    country: CountryType
+    country: CountryType // gelen country değeri CountryType türünde olmalı
 }
 
 export default function Country({country}: ICountryProps) {
