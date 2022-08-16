@@ -54,7 +54,7 @@ export default function Home() {
     },
   ];
 
-  return <Status status={'loading'}/>
+  return <List items={personList} onClick={(value: TPersonList)=> {}}/>
 }
 
 const styles = StyleSheet.create({
