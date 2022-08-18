@@ -1,10 +1,10 @@
 export default function (state: any, action: any) {
-  console.log(action.payload);
-  
   switch (action.type) {
     case 'ADD_NAME':
       const newList = [...state.nameList, action.payload.name];
-      return {...state, newList: newList};
+      console.log('new' + newList);
+      console.log('name' + state.nameList);
+      return {...state, nameList: newList};
     default:
       return state;
   }

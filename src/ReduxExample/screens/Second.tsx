@@ -1,23 +1,22 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import {shallowEqual, useDispatch, useSelector} from 'react-redux';
 
 const Second = () => {
-  const list = useSelector((item: any) => item.nameList);
+  const list = useSelector((state: any) => state.nameList, shallowEqual);
 
   useEffect(() => {
-    console.log(list);
-    
-  
-  }, [])
-  
+    console.log('list' + list);
+  }, []);
 
   return (
     <View style={styles.second}>
       <Text style={styles.text}>Second</Text>
       <FlatList
         data={list}
-        renderItem={(item: any) => <Text style={styles.text}>{item}</Text>}
+        renderItem={(item: any) => {
+          return <Text> {item.item} </Text>;
+        }}
       />
     </View>
   );

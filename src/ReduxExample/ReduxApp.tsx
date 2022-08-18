@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Main from './screens/Main';
 import First from './screens/First';
 import Second from './screens/Second';
 import UserProvider from './provider/UserProvider';
@@ -18,8 +17,7 @@ const ReduxApp = () => {
   return (
     <UserProvider>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Main" component={Main} />
+        <Stack.Navigator initialRouteName='First'>
           <Stack.Screen name="First" component={First} />
           <Stack.Screen name="Second" component={Second} />
         </Stack.Navigator>

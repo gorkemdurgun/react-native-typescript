@@ -8,6 +8,5 @@ import { Counter } from './components/counter/CounterFunction';
 import { Dog } from './components/reducer/Dog';
 import Home from './src/Home';
 import ReduxApp from './src/ReduxExample/ReduxApp';
-import Main from './src/ReduxExample/screens/Main';
 
 AppRegistry.registerComponent(appName, () => ReduxApp);

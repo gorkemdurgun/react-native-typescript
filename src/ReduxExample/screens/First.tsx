@@ -17,7 +17,7 @@ const First = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList>>();
 
-  const handleAdd = () => {
+  function handleAdd () {
     dispatch({type: 'ADD_NAME', payload: {name: text}});
   };
 
